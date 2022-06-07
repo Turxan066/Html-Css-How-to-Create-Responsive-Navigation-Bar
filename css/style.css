@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    height: 80px;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+
+}
+nav .logo{
+    color: #ffffff;
+    font-size:35px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 900;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+nav ul li{
+    margin: 0px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight:600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: 555ms all;
+    -webkit-transition: 555ms all;
+    -moz-transition: 555ms all;
+    -ms-transition: 555ms all;
+    -o-transition: 555ms all;
+}
+nav ul li a:hover{
+    color: #1b1b1b;
+    background-color: #fff;
+}
+nav ul li a:hover,
+nav ul li a.active{
+    color: #1b1b1b;
+    background-color: #ffffff;
+}
+nav .menu_bar i{
+    color: #ffffff;
+    font-size: 22px;
+    cursor:pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+/* Responsive Start  */
+    @media (max-width:940px){
+        #click:checked ~ .menu_bar i:before{
+            content: "\f00d";
+        }
+        nav .menu_bar i{
+            display: block;
+        }
+        nav ul{
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            background-color: #111;
+            height: 100vh;
+            width: 100%;
+            display: block;
+            text-align: center;
+            transition: 777ms all;
+            -webkit-transition:;
+            -moz-transition:;
+            -ms-transition:;
+            -o-transition:;
+}
+        #click:checked ~ ul{
+            left: 0% ;
+        }
+        nav ul li{
+            margin: 50px 0px;
+        }
+        nav ul li a{
+            font-size: 20px;
+            display: block;
+           
+        }
+        nav ul li a:hover,
+        nav ul li a.active{
+            color: cyan;
+            background: none;
+        }
+    }
+/* Responsive End */
